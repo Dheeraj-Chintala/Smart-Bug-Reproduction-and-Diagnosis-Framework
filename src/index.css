@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent-500: #333333;
+  --color-accent-600: #111111;
+  --color-bg-dark: #000000;
+  --color-panel-dark: #111111;
+  --color-border-dark: #333333;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a1a1aa;
+}
+
+@layer base {
+  :root {
+    --bg-color: #f4f4f5;
+    --panel-color: #ffffff;
+    --border-color: #e4e4e7;
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --text-muted: #a1a1aa;
+    --accent: #111111;
+    --accent-hover: #000000;
+    --accent-text: #ffffff;
+
+    /* Code blocks / Pre */
+    --code-bg: #f4f4f5;
+    --code-border: #e4e4e7;
+  }
+
+  /* Dark mode class attached to HTML/Body or a wrapper */
+  .dark {
+    --bg-color: #000000;
+    --panel-color: #0a0a0a;
+    --border-color: #27272a;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --text-muted: #52525b;
+    --accent: #ffffff;
+    --accent-hover: #f4f4f5;
+    --accent-text: #000000;
+
+    /* Code blocks / Pre */
+    --code-bg: #111111;
+    --code-border: #27272a;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
